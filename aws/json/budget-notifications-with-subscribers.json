@@ -1,0 +1,16 @@
+[
+  {
+    "Notification": {
+      "ComparisonOperator": "GREATER_THAN",
+      "NotificationType": "ACTUAL",
+      "Threshold": 70,
+      "ThresholdType": "PERCENTAGE"
+    },
+    "Subscribers": [
+      {
+        "Address": "ademolasobaki@gmail.com",
+        "SubscriptionType": "EMAIL"
+      }
+    ]
+  }
+]
