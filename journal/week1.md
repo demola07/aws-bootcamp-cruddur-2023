@@ -57,7 +57,23 @@ I faced a couple of challenges with this docker compose file.
 
   ![crudder_app](./assets//crudder_app.JPG)
 
+
+
+### _* Run Dynamo Db and Postgres Containers *_
+
+I was able to successfully run the dynamo_db container, and also create a table, insert values and query the values following the instructions in [100DaysofCloudChallenge](https://github.com/100DaysOfCloud/challenge-dynamodb-local)
+
+  ![dynamo_db](./assets//dynamo_db.JPG)
+
+
+I was able run the postgres container and access it via the client, all I had to do was install the postgres client using the command `sudo apt install postgresql-client`
+
+  ![postgres](./assets//postgres.JPG)
+
   
+
+
+
 
 
 
