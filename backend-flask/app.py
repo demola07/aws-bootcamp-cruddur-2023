@@ -5,6 +5,7 @@ import os
 
 from services.home_activities import *
 from services.user_activities import *
+from services.notifications_activities import *
 from services.create_activity import *
 from services.create_reply import *
 from services.search_activities import *
@@ -19,7 +20,7 @@ backend = os.getenv('BACKEND_URL')
 origins = [frontend, backend]
 cors = CORS(
   app, 
-  resources={r"/api/*": {"origins": origins}},
+  resources={r"/api/*": {"origins": "*"}},
   expose_headers="location,link",
   allow_headers="content-type,if-modified-since",
   methods="OPTIONS,GET,HEAD,POST"
@@ -63,6 +64,11 @@ def data_create_message():
 @app.route("/api/activities/home", methods=['GET'])
 def data_home():
   data = HomeActivities.run()
+  return data, 200
+
+@app.route("/api/activities/notifications", methods=['GET'])
+def data_notifications():
+  data = NotificationsActivities.run()
   return data, 200
 
 @app.route("/api/activities/@<string:handle>", methods=['GET'])
