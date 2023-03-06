@@ -43,3 +43,11 @@ I was able to follow the instructions on instrumenting honeycomb with the flash 
   ![xray trace](./assets//aws_xray_trace.JPG)
 
   ![xray trace](./assets//aws_xray_trace1.JPG)
+
+### Instrumenting AWS X-Ray Subsegments
+
+I was able to instrument aws xray subsugments following the instuctions and [Olga Timofeeva's article](https://olley.hashnode.dev/aws-free-cloud-bootcamp-instrumenting-aws-x-ray-subsegments)
+
+ ![xray subsegments](./assets//aws_xray_subsegments.JPG)
+
+ ![xray subsegments](./assets//aws_xray_subsegments1.JPG)
