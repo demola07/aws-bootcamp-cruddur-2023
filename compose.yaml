@@ -13,6 +13,16 @@ services:
       - "4567:4567"
     volumes:
       - ./backend-flask:/backend-flask
+  xray-daemon:
+    image: "amazon/aws-xray-daemon"
+    environment:
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+      AWS_REGION: "eu-west-1"
+    command:
+      - "xray -o -b xray-daemon:2000"
+    ports:
+      - 2000:2000/udp
   frontend-react-js:
     # environment:
     #   REACT_APP_BACKEND_URL: "${REACT_APP_BACKEND_URL}"
@@ -53,7 +63,6 @@ networks:
   internal-network:
     driver: bridge
     name: cruddur
-
 volumes:
   db:
     driver: local

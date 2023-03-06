@@ -1,5 +1,6 @@
 # Week 2 — Distributed Tracing
 
+
 ## Implementing Honeycomb
 
 I was able to follow the instructions on instrumenting honeycomb with the flash backend service successfully.
@@ -32,3 +33,13 @@ I was able to follow the instructions on instrumenting honeycomb with the flash 
 
   ![honeycomb heatmap](./assets//hc_heatmap.JPG)
 
+
+
+---
+## Implementing AWS X-ray for Flask
+
+  ![xray](./assets//aws_xray.JPG)
+
+  ![xray trace](./assets//aws_xray_trace.JPG)
+
+  ![xray trace](./assets//aws_xray_trace1.JPG)
