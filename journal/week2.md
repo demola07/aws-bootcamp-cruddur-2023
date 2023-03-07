@@ -51,3 +51,18 @@ I was able to instrument aws xray subsugments following the instuctions and [Olg
  ![xray subsegments](./assets//aws_xray_subsegments.JPG)
 
  ![xray subsegments](./assets//aws_xray_subsegments1.JPG)
+
+
+ ## Integrate Rollbar for Error Logging
+
+ I was able to successfully integrate rollbar into the crudder application.
+
+  ![rollbar](./assets//rollbar.JPG)
+
+  Rollbar was able to detect the error activitiy created.
+
+  ![rollbar](./assets//rollbar_err.JPG)
+
+  ![rollbar](./assets//rollbar_err1.JPG)
+
+  ![rollbar](./assets//rollbar_err2.JPG)
