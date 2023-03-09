@@ -69,4 +69,6 @@ I was able to instrument aws xray subsugments following the instuctions and [Olg
 
   ## Implementing CloudWatch Logs, install WatchTower, write a custom logger
 
-  
+  ![cloudwatch](./assets//cw_logs.JPG)
+
+  ![cloudwatch](./assets//cw_logs1.JPG)
