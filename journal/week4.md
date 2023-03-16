@@ -37,3 +37,14 @@ aws rds create-db-instance \
 
 
 
+## Implement queries
+
+I was able to successfully implement the query to get all home activities data
+
+ ![postgres_query](./assets//postgres_query.JPG)
+
+ ### Connect to AWS RDS
+
+ I was able to successfully connect to my provisioned AWS RDS instance
+
+  ![aws_rds_conn](./assets//rds_aws_conn.JPG)
