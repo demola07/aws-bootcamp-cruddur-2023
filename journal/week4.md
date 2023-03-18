@@ -48,3 +48,25 @@ I was able to successfully implement the query to get all home activities data
  I was able to successfully connect to my provisioned AWS RDS instance
 
   ![aws_rds_conn](./assets//rds_aws_conn.JPG)
+
+### Implement Cognito Post Confirmation lambda
+
+I was able to successfully implement the cognito post confirmation lambda, and was able to successfully signup into cruddur
+
+  ![cognito_lambda](./assets//cognito_lambda.JPG)
+
+  ![cognito_lambda_cloudwatch](./assets//congnito_lambda_cloudwatch.JPG)
+
+  ![cognito_lambda_rds_user](./assets//cognito_rds_user.JPG)
+
+
+### Creating activities endpoint
+I was able to create the activities endpoint in the backend flask application
+
+*Challenge*: 
+I encountered a challenge and was getting the error `AttributeError: 'NotNullViolation' object has no attribute 'pgerror'`. 
+I was able to figure out the solution by following the conversations on discord. I had to pass the user handle in the frontend react app, as it was hardcoded on the backend. 
+
+
+
+

@@ -1,9 +1,27 @@
 from psycopg_pool import ConnectionPool
 import os
+import re
+import sys
+from flask import current_app as app
+
 
 class Db:
   def __init__(self):
     self.init_pool()
+
+  def template(self,*args):
+    pathing = list((app.root_path,'db','sql',) + args)
+    pathing[-1] = pathing[-1] + ".sql"
+
+    template_path = os.path.join(*pathing)
+
+    green = '\033[92m'
+    no_color = '\033[0m'
+    print(f'{green} Load SQL Template: {template_path} {no_color}')
+
+    with open(template_path, 'r') as f:
+      template_content = f.read()
+    return template_content
 
   def init_pool(self):
     connection_url = os.getenv("CONNECTION_URL")
@@ -19,6 +37,7 @@ class Db:
   def print_sql(self,title,sql):
     cyan = '\033[96m'
     no_color = '\033[0m'
+    print("\n")
     print(f'{cyan} SQL STATEMENT-[{title}]------{no_color}')
     print(sql)
 
@@ -95,8 +114,6 @@ class Db:
     # print the connect() error
     print ("\npsycopg ERROR:", err, "on line number:", line_num)
     print ("psycopg traceback:", traceback, "-- type:", err_type)
-
-    print("\nextension.Diagnostics:", err.diag)
 
     # print the pgcode and pgerror exceptions
     print ("pgerror:", err.pgerror)
