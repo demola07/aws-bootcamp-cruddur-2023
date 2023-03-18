@@ -63,10 +63,15 @@ I was able to successfully implement the cognito post confirmation lambda, and w
 ### Creating activities endpoint
 I was able to create the activities endpoint in the backend flask application
 
-*Challenge*: 
+*Challenge encountered*: 
 I encountered a challenge and was getting the error `AttributeError: 'NotNullViolation' object has no attribute 'pgerror'`. 
 I was able to figure out the solution by following the conversations on discord. I had to pass the user handle in the frontend react app, as it was hardcoded on the backend. 
 
+  ![creating_activities](./assets//creating_activity.JPG)
+
+  ![creating_activities](./assets//creating_activity1.JPG)
+
+  ![activities](./assets//activities_record.JPG)
 
 
 
