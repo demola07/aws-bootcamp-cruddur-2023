@@ -1,5 +1,5 @@
 #! /usr/bin/bash
--e # stop if it fails at any point
+set -e # stop if it fails at any point
 
 CYAN='\033[1;36m'
 NO_COLOR='\033[0m'
@@ -10,7 +10,9 @@ printf "${CYAN}==== ${LABEL}${NO_COLOR}\n"
 
 ABS_PATH=$(readlink -f "$0")
 PARENT_DIR="$(dirname "$(dirname "$ABS_PATH")")"
-bin_path="$PARENT_DIR/bin"
+bin_path="$PARENT_DIR"
+
+echo $bin_path
 
 source "$bin_path/db/drop"
 source "$bin_path/db/create"
