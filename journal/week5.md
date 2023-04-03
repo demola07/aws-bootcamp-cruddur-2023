@@ -32,4 +32,8 @@ Pattern E Updating a Message Group using DynamoDB Streams
 
   ![rds_instance](./assets//dynamo_5.JPG)
 
+### AWS DynamoDB table
+
+![rds_instance](./assets//dynamo_table.JPG)
+
 
